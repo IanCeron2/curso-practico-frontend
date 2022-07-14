@@ -24,9 +24,11 @@
             font-family: 'Quicksand', sans-serif;
         }
         .mobile-menu {
-            width: 100%;
-            height: auto;
+            display: grid;
+            height: 100vh;
+            grid-template-rows: auto 1fr auto;
             padding: 40px 40px 0 40px;
+            box-sizing: border-box;
         }
         .close-icon {
             display: flex;
@@ -38,26 +40,37 @@
             padding: 0;
             margin: 36px 0 0 0;
         }
+        .border {
+            border-bottom: 1px solid var(--very-light-pink);
+        }
         .mobile-menu ul li a {
             color: var(--black);
             text-decoration: none;
             font-weight: bold;
-            /* margin-bottom: 20px;
-            display: inline-block; */
         }
-        /* .mobile-menu ul li:last-child {
-            padding-top: 15px;
-            border-top: 1px solid var(--very-light-pink);
+        .mobile-menu li {
+            margin-bottom: 20px;
         }
-        .mobile-menu ul li:last-child a{
-            color: var(--hospital-green);
+        .mobile-menu ul:nth-child(1) li:last-child {
+            margin-bottom: 32px;
+        }
+        .mobile-menu .email {
+            margin-bottom: 6px;
+        }
+        .mobile-menu .email a {
             font-size: var(--sm);
-        } */
-        /* .mobile-menu ul li:not(:last-child) {
-            font-weight: bold;
-        } */
-        @media (max-width: 640px) {
-            
+            font-weight: 300;
+        }
+        .mobile-menu ul:last-child li:last-child a {
+            font-size: var(--sm);
+            color: var(--hospital-green);
+            font-weight: 600;
+        }
+        .mobile-menu-end {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -66,7 +79,7 @@
         <!-- <div class="close-icon">
             <img src="./icons/icon_close.png" alt="">
         </div> -->
-        <ul>
+        <ul class="border">
             <li>
                 <a href="/">CATEGORIES</a>
             </li>
@@ -89,24 +102,25 @@
                 <a href="/">Others</a>
             </li>
         </ul>
-
-        <ul>
-            <li>
-                <a href="/">My orders</a>
-            </li>
-            <li>
-                <a href="/">My account</a>
-            </li>
-        </ul>
-
-        <ul>
-            <li>
-                <a href="/">camilayokoo@gmail.com</a>
-            </li>
-            <li>
-                <a href="/">Sign out</a>
-            </li>
-        </ul>
+        <div class="mobile-menu-end">
+            <ul>
+                <li>
+                    <a href="/">My orders</a>
+                </li>
+                <li>
+                    <a href="/">My account</a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="email">
+                    <a href="/">camilayokoo@gmail.com</a>
+                </li>
+                <li>
+                    <a href="/">Sign out</a>
+                </li>
+            </ul>
+        </div>
     </div>     
 </body>
 </html>
