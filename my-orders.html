@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>My orders</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .my-order-container {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .my-orders-descrip {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        .my-orders-descrip h1 {
+            font-size: var(--lg);
+            font-weight: bold;
+            margin-bottom: 35px;
+        }
+        .descrip-general {
+            background: var(--text-input-field);
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .my-orders {
+            background: var(--white);
+            padding: 10px 0 10px 0;
+        }
+        p {
+            font-size: var(--md);
+            margin: 0;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .descrip-general div:nth-child(1) p {
+            margin-bottom: 4px;
+        }
+        .descrip-general div:nth-child(1) p:nth-child(2) {
+            font-weight: 300;
+            font-size: var(--sm);
+        }
+        .descrip-general div:nth-child(2), .item-card p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            margin-left: 24px;
+        }
+        @media (max-width: 640px) {
+            .my-order-container {
+                justify-content: center;
+                place-items: normal;
+            }
+            .my-orders-descrip {
+                width: 300px;
+            }
+            .my-orders-descrip h1 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="my-order-container">
+        <div class="my-orders-descrip">
+            <h1>My orders</h1>
+            <div class="descrip-general my-orders">
+                <div>
+                    <p class="bold">04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div>
+                    <p class="bold">$ 177,000</p>
+                    <a href="my-order.html">
+                        <img src="./icons/flechita.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="descrip-general my-orders">
+                <div>
+                    <p class="bold">04.12.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div>
+                    <p class="bold">$ 177,000</p>
+                    <a href="my-order.html">
+                        <img src="./icons/flechita.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="descrip-general my-orders">
+                <div>
+                    <p class="bold">03.26.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div>
+                    <p class="bold">$ 177,000</p>
+                    <a href="my-order.html">
+                        <img src="./icons/flechita.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="descrip-general my-orders">
+                <div>
+                    <p class="bold">02.03.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div>
+                    <p class="bold">$ 177,000</p>
+                    <a href="my-order.html">
+                        <img src="./icons/flechita.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="descrip-general my-orders">
+                <div>
+                    <p class="bold">02.01.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div>
+                    <p class="bold">$ 177,000</p>
+                    <a href="my-order.html">
+                        <img src="./icons/flechita.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
