@@ -11,3 +11,4 @@ Este es un curso en donde estoy practicando la parte del frontend creando varias
 - menu-mobile.html es un menu que se agregara a la vista de inicio y se vera solo en pantallas menores a 640px
 - my-order.html es la vista para poder ver la descripcion general y los articulos que se seleccionaron en dicha orden
 - my-orders.html es la vista donde se en listan todas las ordenes realizadas
+- navbar.html es la vista donde diseñamos el navbar del sistema, tanto en la vista de escritorio como en la mobile, es decir, es un navbar responsivo

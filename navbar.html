@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Navbar</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        nav {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 10px 45px 10px 45px;
+            border-bottom: 2px solid var(--text-input-field);
+        }
+        .menu {
+            display: none;
+        }
+        .logo {
+            height: 30px;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+            margin-left: 40px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid var(--white);
+        }        
+        ul li a:hover {
+            color: var(--hospital-green);          
+            border: 1px solid var(--hospital-green);
+        }        
+        .navbar-left, .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+        .email {
+            display: flex;
+            align-items: center;
+            margin-right: 12px;
+        }
+        .email p {
+            margin: 0;
+            font-size: var(--sm);
+            font-weight: 300;
+        }
+        .email img {
+            height: 10px;
+            transform: rotate(90deg);
+            align-items: center;
+            margin-left: 6px;
+        }
+        .sign-in {
+            display: none;
+        }
+        @media (max-width: 640px) {
+            .menu {
+                display: block;
+            }
+            .navbar-left ul {
+                display: none;
+            }
+            .navbar-right ul li:not(:last-child) {
+                display: none;
+            }
+            ul {
+                margin-left: 0;
+            }
+            nav {
+                padding: 10px 20px;
+            }
+            .logo {
+                height: 25px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+        <div class="navbar-left">
+            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+            <ul>
+                <li>
+                    <a href="/">All</a>
+                </li>
+                <li>
+                    <a href="/">Clothes</a>
+                </li>
+                <li>
+                    <a href="/">Electronics</a>
+                </li>
+                <li>
+                    <a href="/">Furniture</a>
+                </li>
+                <li>
+                    <a href="/">Toys</a>
+                </li>
+                <li>
+                    <a href="/">Others</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li class="email">
+                    <p>camilayokoo@gmail.com</p>
+                    <img src="./icons/flechita.svg" alt="">
+                </li>
+                <li class="sign-in">
+                    <a href="/">Sign in</a>
+                </li>
+                <li>
+                    <img src="./icons/icon_shopping_cart_notification.svg" alt="carrito" class="carrito">
+                </li>
+            </ul>
+        </div>
+    </nav>    
+</body>
+</html>
